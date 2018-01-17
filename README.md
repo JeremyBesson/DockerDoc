@@ -26,7 +26,9 @@ docker rm $(docker ps –q –f status=exited)
 
 ### remove unused images.
 
+```
 docker rmi –f $(docker images –q –f “dangling=true”)
+```
 
 ### remove exited container.
 
