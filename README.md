@@ -1,5 +1,21 @@
 # DockerDoc
 
+## Monitoring docker
+
+### Docker daemon log 
+
+```
+sudo cat /var/log/upstart/docker.log
+```
+
+### Containers stats
+
+/!\ It's fail in version < 17.12 if we have one container in creating state. Try without option --no-stream to solve it. 
+
+```
+docker stats --no-stream
+```
+
 ## Clean docker 
 
 ### remove exited container.
