@@ -4,16 +4,16 @@
 
 ### Docker daemon log 
 
-* Ubuntu (old using upstart ) - /var/log/upstart/docker.log
-* Ubuntu (new using systemd ) - sudo journalctl -fu docker.service
-* Boot2Docker - /var/log/docker.log
-* Debian GNU/Linux - /var/log/daemon.log
-* CentOS - /var/log/daemon.log | grep docker
-* CoreOS - journalctl -u docker.service
-* Fedora - journalctl -u docker.service
-* Red Hat Enterprise Linux Server - /var/log/messages | grep docker
-* OpenSuSE - journalctl -u docker.service
-* OSX - ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/log/d‌​ocker.log
+* Ubuntu (old using upstart ) - ```/var/log/upstart/docker.log```
+* Ubuntu (new using systemd ) - ```sudo journalctl -fu docker.service```
+* Boot2Docker - ```/var/log/docker.log```
+* Debian GNU/Linux - ```/var/log/daemon.log```
+* CentOS - ```/var/log/daemon.log | grep docker```
+* CoreOS - ```journalctl -u docker.service```
+* Fedora - ```journalctl -u docker.service```
+* Red Hat Enterprise Linux Server - ```/var/log/messages | grep docker```
+* OpenSuSE - ```journalctl -u docker.service```
+* OSX - ```~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/log/d‌​ocker.log```
 * Windows - Get-EventLog -LogName Application -Source Docker -After (Get-Date).AddMinutes(-5) | Sort-Object Time
 
 ### Containers stats
