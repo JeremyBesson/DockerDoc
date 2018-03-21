@@ -1,5 +1,17 @@
 # DockerDoc
 
+## Docker in production
+
+### Edit container env vars 
+
+Stop service docker.
+
+Edit this file:
+
+```
+/var/lib/docker/containers/[container-id]/config.json
+```
+
 ## Monitoring docker
 
 ### Docker daemon log 
