@@ -4,12 +4,20 @@
 
 ### Edit container env vars 
 
+#### With Docker < v1.13:
+
 Stop service docker.
 
 Edit this file:
 
 ```
 /var/lib/docker/containers/[container-id]/config.json
+```
+
+#### With Docker > v1.13 :
+
+```
+docker exec -e ENV_VAR=value
 ```
 
 ## Monitoring docker
