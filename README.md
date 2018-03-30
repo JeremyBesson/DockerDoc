@@ -17,7 +17,7 @@ Edit this file:
 #### With Docker > v1.13 :
 
 ```
-docker exec -e ENV_VAR=value
+docker exec \<container-id\> -e ENV_VAR=value
 ```
 
 ## Monitoring docker
