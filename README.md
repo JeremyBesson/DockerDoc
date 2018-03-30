@@ -81,3 +81,11 @@ docker rmi –f $(docker images –q –f “dangling=true”)
 ```
 docker images -a|grep '^<none>'|tr -s ' '|cut -d' ' -f 3|xargs docker rmi
 ```
+
+## Other usefull commands
+
+### Get file content in stdout 
+
+```
+docker exec <container-id> cat /filename
+```
