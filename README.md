@@ -86,7 +86,8 @@ docker images -a|grep '^<none>'|tr -s ' '|cut -d' ' -f 3|xargs docker rmi
 
 ```
 sudo apt-get purge -y docker-engine docker docker.io docker-ce  
-sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce  
+sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce 
+sudo kill `ps -ef | grep docker | grep -v grep | awk '{print $2}'` 
 sudo rm -rf /var/lib/docker
 sudo rm /etc/apparmor.d/docker
 sudo groupdel docker
