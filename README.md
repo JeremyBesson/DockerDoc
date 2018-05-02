@@ -96,7 +96,7 @@ sudo rm -rf /var/run/docker.sock
 If you experiencing this issue https://github.com/moby/moby/issues/17902 (Unable to remove filesystem for xxx: remove /var/lib/docker/containers/xxx/shm: device or resource busy)
 
 - Reboot the server
-And run 
+- Run again 
 
 ```
 sudo rm -rf /var/lib/docker
