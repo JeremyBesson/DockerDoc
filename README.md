@@ -87,11 +87,19 @@ docker images -a|grep '^<none>'|tr -s ' '|cut -d' ' -f 3|xargs docker rmi
 ```
 sudo apt-get purge -y docker-engine docker docker.io docker-ce  
 sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce 
-sudo kill `ps -ef | grep docker | grep -v grep | awk '{print $2}'` 
 sudo rm -rf /var/lib/docker
 sudo rm /etc/apparmor.d/docker
 sudo groupdel docker
 sudo rm -rf /var/run/docker.sock
+```
+
+If you experiencing this issue https://github.com/moby/moby/issues/17902 (Unable to remove filesystem for xxx: remove /var/lib/docker/containers/xxx/shm: device or resource busy)
+
+- Reboot the server
+And run 
+
+```
+sudo rm -rf /var/lib/docker
 ```
 
 ## Other usefull commands
