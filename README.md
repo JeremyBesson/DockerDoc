@@ -82,7 +82,9 @@ docker rmi –f $(docker images –q –f “dangling=true”)
 docker images -a|grep '^<none>'|tr -s ' '|cut -d' ' -f 3|xargs docker rmi
 ```
 
-## Purge docker (Unbuntu 16.04)
+## Purge docker
+
+### Ubuntu 16.04
 
 ```
 sudo apt-get purge -y docker-engine docker docker.io docker-ce  
