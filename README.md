@@ -291,6 +291,12 @@ docker stats --no-stream
 
 ## Clean docker 
 
+### General clean 
+
+```
+docker system prune
+```
+
 ### Clean volumes 
 
 ```
