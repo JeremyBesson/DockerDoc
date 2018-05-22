@@ -267,7 +267,15 @@ docker exec \<container-id\> -e ENV_VAR=value
 
 ## Monitoring docker
 
-### Docker daemon log 
+### General 
+
+#### Disk usage
+
+```
+docker system df
+```
+
+#### Docker daemon log 
 
 * Ubuntu (old using upstart ) - ```/var/log/upstart/docker.log```
 * Ubuntu (new using systemd ) - ```sudo journalctl -fu docker.service```
@@ -281,7 +289,9 @@ docker exec \<container-id\> -e ENV_VAR=value
 * OSX - ```~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/log/d‌​ocker.log```
 * Windows - Get-EventLog -LogName Application -Source Docker -After (Get-Date).AddMinutes(-5) | Sort-Object Time
 
-### Containers stats
+### Containers
+
+#### Containers stats
 
 /!\ It's fail in docker version < 17.12 if we have one container in creating state. Try without option --no-stream to solve it. 
 
