@@ -4,6 +4,8 @@
 
 **Extract of "DevOps with Kubernetes" (Published by Packt Publishing Ltd.
    Hideto Saito, Hui-Chuan Chloe Lee, Cheng-Yang Wu)**
+   
+   
 The building blocks of a  Dockerfile are a dozen or more directives;
 most of them are a counterpart of the functions of docker run/create flags.
 Here we list the most essential ones:
