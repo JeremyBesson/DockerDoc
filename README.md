@@ -331,21 +331,39 @@ docker system prune
 
 ### Containers 
 
-#### remove exited container.
+#### remove exited container
 
 ```
 docker rm $(docker ps –q –f status=exited)
 ```
 
-#### remove exited container.
+#### remove exited container
 
 ```
 docker ps -a|grep Exit|cut -d' ' -f 1|xargs docker rm
 ```
 
+#### Force container removal 
+
+```
+docker rm -f <container-id>
+```
+
+If it doesn't work:
+
+```
+ps -aux | grep <container-id> 
+```
+
+Find pid of "docker-containerd-shim -namespace moby...."
+
+```
+kill <pid>
+```
+
 ### Images
 
-#### remove unused images.
+#### remove unused images
 
 ```
 docker rmi –f $(docker images –q –f “dangling=true”)
